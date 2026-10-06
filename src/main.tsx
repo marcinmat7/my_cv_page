@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowUpRight, Github, Moon, Sun } from 'lucide-react';
+import { ArrowUpRight, Moon, Sun } from 'lucide-react';
 import './styles.css';
 
 const roles = [
@@ -42,7 +42,7 @@ function App() {
           <p className="hero-copy">I’m Marcin Matuszewski, a data scientist with a mathematics background and experience across credit risk, model validation, AML and applied machine learning in European banking and fintech.</p>
           <div className="hero-actions">
             <a className="button primary" href="#projects">View selected work <ArrowUpRight size={17}/></a>
-            <a className="button ghost" href="https://github.com/marcinmat7" target="_blank" rel="noreferrer"><Github size={17}/> GitHub</a>
+            <a className="button ghost" href="https://github.com/marcinmat7" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <div className="hero-meta">
             <span>Based in Poland</span><span>•</span><span>Open to senior / lead data science opportunities</span>
@@ -73,7 +73,7 @@ function App() {
         </section>
 
         <section className="section contact container" id="contact">
-          <div className="contact-card"><div><div className="eyebrow">Let’s connect</div><h2>Interested in credit risk, ML or building better decision systems?</h2><p>I’m always happy to talk about modeling, validation, fintech and data products.</p></div><div className="contact-actions"><a className="button primary" href="https://github.com/marcinmat7" target="_blank" rel="noreferrer"><Github size={17}/> Find me on GitHub</a></div></div>
+          <div className="contact-card"><div><div className="eyebrow">Let’s connect</div><h2>Interested in credit risk, ML or building better decision systems?</h2><p>I’m always happy to talk about modeling, validation, fintech and data products.</p></div><div className="contact-actions"><a className="button primary" href="https://github.com/marcinmat7" target="_blank" rel="noreferrer">Find me on GitHub</a></div></div>
         </section>
       </main>
 
