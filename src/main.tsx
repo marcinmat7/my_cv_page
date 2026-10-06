@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowUpRight, Github, Linkedin, Mail, Moon, Sun } from 'lucide-react';
+import { ArrowUpRight, Github, Moon, Sun } from 'lucide-react';
 import './styles.css';
 
 const roles = [
@@ -73,7 +73,7 @@ function App() {
         </section>
 
         <section className="section contact container" id="contact">
-          <div className="contact-card"><div><div className="eyebrow">Let’s connect</div><h2>Interested in credit risk, ML or building better decision systems?</h2><p>I’m always happy to talk about modeling, validation, fintech and data products.</p></div><div className="contact-actions"><a className="button primary" href="mailto:marcinmat7@gmail.com"><Mail size={17}/> Email me</a><a className="button ghost" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={17}/> LinkedIn</a></div></div>
+          <div className="contact-card"><div><div className="eyebrow">Let’s connect</div><h2>Interested in credit risk, ML or building better decision systems?</h2><p>I’m always happy to talk about modeling, validation, fintech and data products.</p></div><div className="contact-actions"><a className="button primary" href="https://github.com/marcinmat7" target="_blank" rel="noreferrer"><Github size={17}/> Find me on GitHub</a></div></div>
         </section>
       </main>
 
