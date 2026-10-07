@@ -104,15 +104,15 @@ a{color:inherit;text-decoration:none}
   .summary-card h2{font-size:1.45rem}
 }
 
-/* Virtual cousin cat — stage 1 teaser */
+/* Virtual cousin illustrated cat — stage 1 teaser */
 .virtual-cousin{
   position:fixed;
-  right:28px;
-  bottom:20px;
+  right:26px;
+  bottom:16px;
   z-index:30;
   display:flex;
   align-items:flex-end;
-  gap:14px;
+  gap:10px;
   pointer-events:none;
 }
 .cousin-bubble{
@@ -132,7 +132,7 @@ a{color:inherit;text-decoration:none}
   content:"";
   position:absolute;
   right:-8px;
-  bottom:18px;
+  bottom:22px;
   width:14px;
   height:14px;
   background:var(--paper);
@@ -142,185 +142,47 @@ a{color:inherit;text-decoration:none}
 }
 .cousin-bubble strong{display:block;color:var(--text);font-size:.82rem;margin-bottom:3px}
 .cousin-bubble span{display:block}
-
-.cat-mascot{
+.cat-image-button{
   pointer-events:auto;
-  position:relative;
-  width:112px;
-  height:126px;
+  width:178px;
+  height:218px;
   padding:0;
+  margin:0 -8px -8px 0;
   border:0;
   background:transparent;
   cursor:default;
-  filter:drop-shadow(0 12px 16px rgba(21,45,55,.20));
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  filter:drop-shadow(0 13px 15px rgba(20,38,48,.18));
   animation:cat-float 3.6s ease-in-out infinite;
 }
-.cat-tail{
-  position:absolute;
-  right:1px;
-  bottom:17px;
-  width:38px;
-  height:62px;
-  border:7px solid #68737d;
-  border-left-color:transparent;
-  border-bottom-color:#68737d;
-  border-radius:50%;
-  transform:rotate(-20deg);
-  z-index:0;
-}
-.cat-body{
-  position:absolute;
-  left:27px;
-  bottom:7px;
-  width:62px;
-  height:68px;
-  border:2px solid #4f5b64;
-  border-radius:45% 45% 38% 38%;
-  background:linear-gradient(155deg,#b8c0c7 0%,#8d98a1 48%,#737f88 100%);
-  z-index:1;
-}
-.cat-chest{
-  position:absolute;
-  left:50%;
-  top:18px;
-  width:35px;
-  height:42px;
-  border-radius:50% 50% 40% 40%;
-  background:#f5f0e9;
-  transform:translateX(-50%);
-}
-.cat-head{
-  position:absolute;
-  left:16px;
-  top:11px;
-  width:82px;
-  height:72px;
-  border:2px solid #4f5b64;
-  border-radius:47% 47% 44% 44%;
-  background:linear-gradient(150deg,#c9cfd4 0%,#a8b1b8 55%,#8c979f 100%);
-  z-index:4;
-}
-.cat-ear{
-  position:absolute;
-  top:-16px;
-  width:30px;
-  height:34px;
-  background:#9da7af;
-  border:2px solid #4f5b64;
-  z-index:-1;
-}
-.cat-ear i{
-  position:absolute;
-  inset:7px 7px 5px;
-  background:#d8a8aa;
-  clip-path:polygon(50% 0,100% 100%,0 100%);
-}
-.cat-ear-left{left:6px;transform:rotate(-14deg);clip-path:polygon(50% 0,100% 100%,0 100%)}
-.cat-ear-right{right:6px;transform:rotate(14deg);clip-path:polygon(50% 0,100% 100%,0 100%)}
-.cat-face-patch{
-  position:absolute;
-  top:12px;
-  width:29px;
-  height:34px;
-  border-radius:50%;
-  background:#eef1f3;
-  opacity:.9;
-}
-.cat-face-patch-left{left:10px;transform:rotate(9deg)}
-.cat-face-patch-right{right:10px;transform:rotate(-9deg)}
-.cat-eye{
-  position:absolute;
-  top:25px;
-  width:21px;
-  height:24px;
-  border-radius:50%;
-  background:#fff;
-  box-shadow:inset 0 -2px 0 rgba(0,0,0,.06);
-  display:grid;
-  place-items:center;
-  z-index:3;
-}
-.cat-eye-left{left:14px}
-.cat-eye-right{right:14px}
-.cat-eye i{
-  width:10px;
-  height:14px;
-  border-radius:50%;
-  background:#27323a;
+.cat-image{
   display:block;
-  position:relative;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+  user-select:none;
+  -webkit-user-drag:none;
 }
-.cat-eye i:after{
-  content:"";
-  position:absolute;
-  width:3px;
-  height:4px;
-  border-radius:50%;
-  background:#fff;
-  left:2px;
-  top:2px;
-}
-.cat-nose{
-  position:absolute;
-  left:50%;
-  top:47px;
-  width:10px;
-  height:7px;
-  border-radius:50% 50% 60% 60%;
-  background:#d98587;
-  transform:translateX(-50%);
-  z-index:4;
-}
-.cat-mouth{
-  position:absolute;
-  top:52px;
-  width:12px;
-  height:8px;
-  border-bottom:2px solid #555f67;
-  z-index:4;
-}
-.cat-mouth-left{left:30px;border-radius:0 0 10px 0;transform:rotate(-8deg)}
-.cat-mouth-right{right:30px;border-radius:0 0 0 10px;transform:rotate(8deg)}
-.cat-whiskers{
-  position:absolute;
-  top:51px;
-  width:25px;
-  height:1px;
-  background:#69747c;
-  box-shadow:0 6px 0 #69747c;
-  z-index:2;
-}
-.cat-whiskers-left{left:-13px;transform:rotate(7deg)}
-.cat-whiskers-right{right:-13px;transform:rotate(-7deg)}
-.cat-paw{
-  position:absolute;
-  bottom:2px;
-  width:31px;
-  height:14px;
-  border:2px solid #4f5b64;
-  border-radius:55% 55% 45% 45%;
-  background:#a9b1b8;
-  z-index:5;
-}
-.cat-paw-left{left:22px}
-.cat-paw-right{right:22px}
 @keyframes cat-float{
-  0%,100%{transform:translateY(0) rotate(-.6deg)}
-  50%{transform:translateY(-6px) rotate(.6deg)}
+  0%,100%{transform:translateY(0) rotate(-.4deg)}
+  50%{transform:translateY(-6px) rotate(.4deg)}
 }
 @keyframes cousin-bubble-in{
   from{opacity:0;transform:translateY(7px) scale(.98)}
   to{opacity:1;transform:translateY(0) scale(1)}
 }
 @media(max-width:760px){
-  .virtual-cousin{right:12px;bottom:10px;gap:9px}
-  .cousin-bubble{width:210px;font-size:.73rem;padding:10px 12px}
-  .cat-mascot{width:96px;height:110px;transform-origin:bottom right}
+  .virtual-cousin{right:8px;bottom:8px;gap:4px}
+  .cousin-bubble{width:205px;font-size:.73rem;padding:10px 12px}
+  .cat-image-button{width:142px;height:174px}
 }
 @media(max-width:500px){
-  .cousin-bubble{width:175px}
-  .cat-mascot{width:88px;height:102px}
+  .cousin-bubble{width:165px}
+  .cat-image-button{width:126px;height:154px}
 }
 @media(prefers-reduced-motion:reduce){
-  .cat-mascot,.cousin-bubble{animation:none}
+  .cat-image-button,.cousin-bubble{animation:none}
 }
