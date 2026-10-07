@@ -231,17 +231,24 @@ function App() {
           <strong>Hi, I’m Marcin’s virtual cousin.</strong>
           <span>I know him very well — you can ask me any question about him.</span>
         </div>
-        <button className="cousin-creature" type="button" aria-label="Virtual cousin — chat coming soon" title="Chat coming soon">
-          <span className="cousin-ear cousin-ear-left" />
-          <span className="cousin-ear cousin-ear-right" />
-          <span className="cousin-face">
-            <span className="cousin-eye cousin-eye-left"><i /></span>
-            <span className="cousin-eye cousin-eye-right"><i /></span>
-            <span className="cousin-mouth" />
+        <button className="cat-mascot" type="button" aria-label="Virtual cousin cat — chat coming soon" title="Chat coming soon">
+          <span className="cat-tail" />
+          <span className="cat-body"><span className="cat-chest" /></span>
+          <span className="cat-head">
+            <span className="cat-ear cat-ear-left"><i /></span>
+            <span className="cat-ear cat-ear-right"><i /></span>
+            <span className="cat-face-patch cat-face-patch-left" />
+            <span className="cat-face-patch cat-face-patch-right" />
+            <span className="cat-eye cat-eye-left"><i /></span>
+            <span className="cat-eye cat-eye-right"><i /></span>
+            <span className="cat-nose" />
+            <span className="cat-mouth cat-mouth-left" />
+            <span className="cat-mouth cat-mouth-right" />
+            <span className="cat-whiskers cat-whiskers-left" />
+            <span className="cat-whiskers cat-whiskers-right" />
           </span>
-          <span className="cousin-body">
-            <span className="cousin-belly" />
-          </span>
+          <span className="cat-paw cat-paw-left" />
+          <span className="cat-paw cat-paw-right" />
         </button>
       </aside>
 
