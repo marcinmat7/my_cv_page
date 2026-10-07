@@ -226,6 +226,25 @@ function App() {
         </section>
       </main>
 
+      <aside className="virtual-cousin" aria-label="Marcin's virtual cousin">
+        <div className="cousin-bubble">
+          <strong>Hi, I’m Marcin’s virtual cousin.</strong>
+          <span>I know him very well — you can ask me any question about him.</span>
+        </div>
+        <button className="cousin-creature" type="button" aria-label="Virtual cousin — chat coming soon" title="Chat coming soon">
+          <span className="cousin-ear cousin-ear-left" />
+          <span className="cousin-ear cousin-ear-right" />
+          <span className="cousin-face">
+            <span className="cousin-eye cousin-eye-left"><i /></span>
+            <span className="cousin-eye cousin-eye-right"><i /></span>
+            <span className="cousin-mouth" />
+          </span>
+          <span className="cousin-body">
+            <span className="cousin-belly" />
+          </span>
+        </button>
+      </aside>
+
       <footer className="footer shell">
         <span>© {new Date().getFullYear()} Marcin Matuszewski</span>
         <span>Senior Data Scientist · Poland</span>

@@ -103,3 +103,170 @@ a{color:inherit;text-decoration:none}
   .cert-grid{grid-template-columns:1fr}
   .summary-card h2{font-size:1.45rem}
 }
+
+/* Virtual cousin — stage 1 teaser */
+.virtual-cousin{
+  position:fixed;
+  right:26px;
+  bottom:22px;
+  z-index:30;
+  display:flex;
+  align-items:flex-end;
+  gap:12px;
+  pointer-events:none;
+}
+.cousin-bubble{
+  position:relative;
+  width:245px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:14px 14px 4px 14px;
+  background:var(--paper);
+  box-shadow:0 12px 34px rgba(28,39,49,.14);
+  font-size:.78rem;
+  line-height:1.4;
+  color:var(--muted);
+  animation:cousin-bubble-in .45s ease-out both;
+}
+.cousin-bubble:after{
+  content:"";
+  position:absolute;
+  right:-8px;
+  bottom:11px;
+  width:14px;
+  height:14px;
+  background:var(--paper);
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  transform:rotate(-45deg);
+}
+.cousin-bubble strong{
+  display:block;
+  color:var(--text);
+  font-size:.8rem;
+  margin-bottom:3px;
+}
+.cousin-bubble span{display:block}
+.cousin-creature{
+  pointer-events:auto;
+  position:relative;
+  width:68px;
+  height:82px;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:default;
+  filter:drop-shadow(0 9px 12px rgba(15,95,103,.18));
+  animation:cousin-float 3.4s ease-in-out infinite;
+}
+.cousin-face{
+  position:absolute;
+  left:8px;
+  top:5px;
+  width:52px;
+  height:48px;
+  border:2px solid color-mix(in srgb,var(--accent) 78%,#000);
+  border-radius:46% 46% 42% 42%;
+  background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 72%,#fff),var(--accent));
+  z-index:3;
+}
+.cousin-ear{
+  position:absolute;
+  top:1px;
+  width:20px;
+  height:22px;
+  border:2px solid color-mix(in srgb,var(--accent) 78%,#000);
+  background:var(--accent);
+  z-index:1;
+}
+.cousin-ear-left{
+  left:9px;
+  border-radius:15px 3px 7px 4px;
+  transform:rotate(-19deg);
+}
+.cousin-ear-right{
+  right:9px;
+  border-radius:3px 15px 4px 7px;
+  transform:rotate(19deg);
+}
+.cousin-eye{
+  position:absolute;
+  top:15px;
+  width:13px;
+  height:14px;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+}
+.cousin-eye-left{left:10px}
+.cousin-eye-right{right:10px}
+.cousin-eye i{
+  width:5px;
+  height:6px;
+  border-radius:50%;
+  background:#17212b;
+  display:block;
+}
+.cousin-mouth{
+  position:absolute;
+  left:50%;
+  top:34px;
+  width:10px;
+  height:5px;
+  border-bottom:2px solid #17383b;
+  border-radius:0 0 10px 10px;
+  transform:translateX(-50%);
+}
+.cousin-body{
+  position:absolute;
+  left:13px;
+  bottom:2px;
+  width:42px;
+  height:40px;
+  border:2px solid color-mix(in srgb,var(--accent) 78%,#000);
+  border-radius:42% 42% 48% 48%;
+  background:var(--accent);
+}
+.cousin-belly{
+  position:absolute;
+  left:50%;
+  bottom:5px;
+  width:24px;
+  height:24px;
+  border-radius:50% 50% 46% 46%;
+  background:color-mix(in srgb,var(--accent-soft) 80%,#fff);
+  transform:translateX(-50%);
+}
+.cousin-creature:after,
+.cousin-creature:before{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:16px;
+  height:5px;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 76%,#000);
+  z-index:4;
+}
+.cousin-creature:before{left:12px}
+.cousin-creature:after{right:12px}
+@keyframes cousin-float{
+  0%,100%{transform:translateY(0) rotate(-1deg)}
+  50%{transform:translateY(-5px) rotate(1deg)}
+}
+@keyframes cousin-bubble-in{
+  from{opacity:0;transform:translateY(7px) scale(.98)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@media(max-width:760px){
+  .virtual-cousin{right:12px;bottom:12px;gap:8px}
+  .cousin-bubble{width:205px;font-size:.73rem;padding:10px 12px}
+  .cousin-creature{width:58px;height:70px;transform:scale(.9);transform-origin:bottom right}
+}
+@media(max-width:480px){
+  .cousin-bubble{width:180px}
+}
+@media(prefers-reduced-motion:reduce){
+  .cousin-creature,.cousin-bubble{animation:none}
+}
